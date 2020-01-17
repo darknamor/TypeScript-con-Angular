@@ -20,8 +20,28 @@ class Transporte {
   }
 }
 
-const transporte: Transporte = new Transporte(20,'suelo');
+const transporte: Transporte = new Transporte(20, "suelo");
 
-class Auto extends Transporte{
-    
+class Auto extends Transporte {
+  private cantidadDePuertas: number;
+
+  constructor(
+    velocidad: number,
+    formaDeMovilidad: string,
+    cantidadDePuertas: number
+  ) {
+    super(velocidad, formaDeMovilidad);
+    this.cantidadDePuertas = cantidadDePuertas;
+  }
+  //redefinimos que cuando sea atuo la velocidad aumenta en 10
+  getVelocidad() {
+    return super.getVelocidad() + 10;
+  }
+  getCantidadDePuertas() {
+    return this.cantidadDePuertas;
+  }
+  setCantidadDePuertas(cantidadDePuertas: number) {
+    this.cantidadDePuertas = cantidadDePuertas;
+  }
 }
+const auto: Auto = new Auto(20, "suelo", 4);
