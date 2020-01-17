@@ -1,4 +1,5 @@
 type RUT = number;
+
 interface Persona {
   altura?: number; //el sino ? indica que este atributo es opcional
   edad: number;
