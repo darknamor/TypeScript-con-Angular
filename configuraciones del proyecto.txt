@@ -20,3 +20,7 @@ que se obtienen de :
 
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
+
+ng g service player // creamos un service de nombre player
+y luego se agrega en app.modules.ts // en el array de providers
+ng g service team // luego creamos uno para el team
