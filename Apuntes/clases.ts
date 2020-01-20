@@ -1,4 +1,4 @@
-class Transporte {
+dsadasdaclass Transporte {
   private velocidad: number;
   private formatDeMovilidad: string;
 
