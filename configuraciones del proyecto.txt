@@ -1,2 +1,22 @@
 npm install rxjs@6.0.0 --save //cambie la version de rxjs a la 6.0.0
 npm update
+ng serve //levantar el servidor que levantara la instancia localhost:4200
+
+Para añadir Firebase a nuestro proyecto debemos instalar algunas dependencias con el comando:
+
+npm i -s firebase angularfire2
+
+// O
+
+npm i firebase angularfire2
+
+imports necesarios en app.module.ts
+
+en imports
+AngularFireModule.initializeApp(environment.firebase),
+AngularFireDatabaseModule,
+
+que se obtienen de :
+
+import {AngularFireModule} from 'angularfire2';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
