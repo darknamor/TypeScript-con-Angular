@@ -8,18 +8,18 @@
         </tr>
       </thead>
     </table>
-    <div>
-      <table class="tbl-content">
-        <tbody>
-          <tr *ngFor="let team of items$ | async">
-            <th>{{ team.name }}</th>
-            <th>{{ team.country }}</th>
-            <th>
-              <p *ngFor="let player of team.player">{{ player.name }}</p>
-            </th>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  </div>
+  <div>
+    <table class="tbl-content">
+      <tbody cellpading="0" cellspacing="0" border="0">
+        <tr *ngFor="let team of teams$ | async">
+          <th>{{ team.name }}</th>
+          <th>{{ team.country }}</th>
+          <th>
+            <p *ngFor="let player of team.players">{{ player.name }}</p>
+          </th>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </section>
