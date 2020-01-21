@@ -20,7 +20,7 @@ Desarrollado por Google, Angular es más que un framework, es una plataforma que
 
 ### ¿Qué es Firebase?
 
-irebase es un SaaS de Google que nos ayuda en la creación de aplicaciones web y móvil. Firebase nos brinda una opción sencilla y rápida para nuestra base de datos y backend.
+Firebase es un SaaS de Google que nos ayuda en la creación de aplicaciones web y móvil. Firebase nos brinda una opción sencilla y rápida para nuestra base de datos y backend.
 
 Dentro de Firebase podemos tener bases de datos en tiempo real o realtime databases. Podemos usar Firebase independientemente del lenguaje o framework en el que estemos trabajando.
 
