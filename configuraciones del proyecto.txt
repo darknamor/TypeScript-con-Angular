@@ -28,3 +28,7 @@ ng g service team // luego creamos uno para el team
 ng g component team-table //creo un compomente dentro de la carpeta app
 
 url console https://console.firebase.google.com/u/1/project/typescript-proyecto/database/typescript-proyecto/data~2F
+
+//creamos 2 componentes mas
+ng g component player-table
+ng g component player-dialog
