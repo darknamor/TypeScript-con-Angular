@@ -3,37 +3,39 @@
     <a href="#" title="Close" class="modal-close">Close</a>
     <h1>New Player Form</h1>
     <div>
-      <form #playerForm="ngForm" novalidate(ngSubmit)="onSubmit(PlayerForm">
+      <form #playerForm="ngForm" novalidate (ngSubmit)="onSubmit(playerForm)">
         <div class="form-group">
           <label for="name">Name</label>
           <input
             type="text"
             class="form-control"
             name="name"
-            [(ngModel)]="player?.name"
+            [ngModel]="player?.name"
             ngModel
-            requiered
+            required
           />
         </div>
+
         <div class="form-group">
-          <label for="name">Last Name</label>
+          <label for="lastName">Last Name</label>
           <input
             type="text"
             class="form-control"
             name="lastName"
-            [(ngModel)]="player?.lastName"
+            [ngModel]="player?.lastName"
             ngModel
-            requiered
+            required
           />
         </div>
+
         <div class="form-group">
-          <label for="name">Position</label>
+          <label for="position">Position</label>
           <select
             class="form-control"
             name="position"
-            [(ngModel)]="plaer?.position"
+            [ngModel]="player?.position"
             ngModel
-            requiered
+            required
           >
             <option
               *ngFor="let position of squadNumber"
@@ -42,55 +44,60 @@
             >
           </select>
         </div>
+
         <div class="form-group">
-          <label for="name">Weight</label>
+          <label for="weight">Weight</label>
           <input
             type="text"
             class="form-control"
             name="weight"
-            [(ngModel)]="player?.weight"
+            [ngModel]="player?.weight"
             ngModel
-            requiered
+            required
           />
         </div>
+
         <div class="form-group">
-          <label for="name">Height</label>
+          <label for="height">Height</label>
           <input
             type="text"
             class="form-control"
             name="height"
-            [(ngModel)]="player?.height"
+            [ngModel]="player?.height"
             ngModel
-            requiered
+            required
           />
         </div>
+
         <div class="form-group">
-          <label for="name">Nacionality</label>
+          <label for="nationality">Nationality</label>
           <select
             class="form-control"
-            name="nacionality"
-            [(ngModel)]="plaer?.nacionality"
+            name="nationality"
+            [ngModel]="player?.nationality"
             ngModel
-            requiered
+            required
           >
             <option
-              *ngFor="let nacionality of countries"
-              [value]="nacionality.key"
-              >{{ nacionality.label }}</option
+              *ngFor="let nationality of countries"
+              [value]="nationality.key"
+              >{{ nationality.label }}</option
             >
           </select>
         </div>
+
         <div class="form-group">
-          <label for="name">Left Footed</label>
+          <label for="leftFooted">Left Footed</label>
           <input
-            type="text"
-            class="form-control"
+            type="checkbox"
+            class="form-control checkbox"
             name="leftFooted"
-            [(ngModel)]="player?.leftFooted"
+            [ngModel]="player?.leftFooted"
             ngModel
-            requiered
+            required
           />
         </div>
+
         <div class="submit-container">
           <button type="submit">Submit</button>
         </div>
