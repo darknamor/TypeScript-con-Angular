@@ -36,3 +36,13 @@ ng g component player-table
 ng g component player-dialog
 
 ng serve --ao //busca errores en la logica y en el template del poryecto
+
+Para añadir Firebase a nuestro proyecto debemos instalar algunas dependencias con el comando:
+
+npm i -s firebase angularfire2
+
+// O
+
+npm i firebase angularfire2
+
+// Cualquiera de las dos da el mismo resultado

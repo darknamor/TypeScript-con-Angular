@@ -23,13 +23,3 @@ Desarrollado por Google, Angular es más que un framework, es una plataforma que
 Firebase es un SaaS de Google que nos ayuda en la creación de aplicaciones web y móvil. Firebase nos brinda una opción sencilla y rápida para nuestra base de datos y backend.
 
 Dentro de Firebase podemos tener bases de datos en tiempo real o realtime databases. Podemos usar Firebase independientemente del lenguaje o framework en el que estemos trabajando.
-
-Para añadir Firebase a nuestro proyecto debemos instalar algunas dependencias con el comando:
-
-npm i -s firebase angularfire2
-
-// O
-
-npm i firebase angularfire2
-
-// Cualquiera de las dos da el mismo resultado
