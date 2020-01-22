@@ -8,27 +8,31 @@ import { map } from "rxjs/operators";
   providedIn: "root"
 })
 export class PlayerService {
-  private playerDb: AngularFireList<Player>;
+  private playersDb: AngularFireList<Player>;
 
   constructor(private db: AngularFireDatabase) {
-    this.playerDb = this.db.list("/players", ref => ref.orderByChild("name"));
+    this.playersDb = this.db.list("/players", ref => ref.orderByChild("name"));
   }
+
   getPlayers(): Observable<Player[]> {
-    return this.playerDb.snapshotChanges().pipe(
+    return this.playersDb.snapshotChanges().pipe(
       map(changes => {
         return changes.map(c => ({ $key: c.payload.key, ...c.payload.val() }));
       })
     );
   }
+
   addPlayer(player: Player) {
-    return this.playerDb.push(player);
+    return this.playersDb.push(player);
   }
+
   deletePlayer(id: string) {
     this.db.list("/players").remove(id);
   }
+
   editPlayer(newPlayerData) {
     const $key = newPlayerData.$key;
     delete newPlayerData.$key;
-    this.db.list("/player").update($key, newPlayerData);
+    this.db.list("/players").update($key, newPlayerData);
   }
 }
