@@ -19,7 +19,7 @@ export class PlayerDialogComponent implements OnInit {
     .slice(Object.keys(SquadNumber).length / 2)
     .map(key => ({
       label: key,
-      key: Countries[key]
+      key: SquadNumber[key]
     }));
   constructor(
     private playerService: PlayerService,
