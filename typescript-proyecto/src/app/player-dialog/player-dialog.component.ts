@@ -59,6 +59,6 @@ export class PlayerDialogComponent implements OnInit {
         playerFormValue.leftFooted === "" ? false : playerFormValue.leftFooted;
     }
     this.newPlayer(playerFormValue);
-    window.location.replace('#');
+    window.location.replace("#");
   }
 }
