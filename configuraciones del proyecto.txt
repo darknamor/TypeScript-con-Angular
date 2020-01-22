@@ -1,3 +1,5 @@
+npm install -g @angular/cli //instalar angular
+ng new "nombre proyecto" //crear proyecto
 npm install rxjs@6.0.0 --save //cambie la version de rxjs a la 6.0.0
 npm update
 ng serve //levantar el servidor que levantara la instancia localhost:4200
