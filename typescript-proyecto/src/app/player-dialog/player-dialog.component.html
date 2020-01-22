@@ -1,1 +1,100 @@
-<p>player-dialog works!</p>
+<div id="open-modal" class="modal-window">
+  <div>
+    <a href="#" title="Close" class="modal-close">Close</a>
+    <h1>New Player Form</h1>
+    <div>
+      <form #playerForm="ngForm" novalidate(ngSubmit)="onSubmit(PlayerForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            [(ngModel)]="player?.name"
+            ngModel
+            requiered
+          />
+        </div>
+        <div class="form-group">
+          <label for="name">Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="lastName"
+            [(ngModel)]="player?.lastName"
+            ngModel
+            requiered
+          />
+        </div>
+        <div class="form-group">
+          <label for="name">Position</label>
+          <select
+            class="form-control"
+            name="position"
+            [(ngModel)]="plaer?.position"
+            ngModel
+            requiered
+          >
+            <option
+              *ngFor="let position of squadNumber"
+              [value]="position.key"
+              >{{ position.label }}</option
+            >
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="name">Weight</label>
+          <input
+            type="text"
+            class="form-control"
+            name="weight"
+            [(ngModel)]="player?.weight"
+            ngModel
+            requiered
+          />
+        </div>
+        <div class="form-group">
+          <label for="name">Height</label>
+          <input
+            type="text"
+            class="form-control"
+            name="height"
+            [(ngModel)]="player?.height"
+            ngModel
+            requiered
+          />
+        </div>
+        <div class="form-group">
+          <label for="name">Nacionality</label>
+          <select
+            class="form-control"
+            name="nacionality"
+            [(ngModel)]="plaer?.nacionality"
+            ngModel
+            requiered
+          >
+            <option
+              *ngFor="let nacionality of countries"
+              [value]="nacionality.key"
+              >{{ nacionality.label }}</option
+            >
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="name">Left Footed</label>
+          <input
+            type="text"
+            class="form-control"
+            name="leftFooted"
+            [(ngModel)]="player?.leftFooted"
+            ngModel
+            requiered
+          />
+        </div>
+        <div class="submit-container">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

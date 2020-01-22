@@ -3,7 +3,7 @@ import { Countries, SquadNumber } from "../interfaces/player";
 import { PlayerService } from "../services/player.service";
 import { TeamService } from "../services/team.service";
 import { take } from "rxjs/operators";
-
+import { NgForm } from "@angular/forms";
 @Component({
   selector: "app-player-dialog",
   templateUrl: "./player-dialog.component.html",
@@ -16,7 +16,6 @@ export class PlayerDialogComponent implements OnInit {
     key: Countries[key]
   }));
   public squadNumber = Object.keys(SquadNumber)
-    .slice(Object.keys(SquadNumber).length / 2)
     .slice(Object.keys(SquadNumber).length / 2)
     .map(key => ({
       label: key,
@@ -52,5 +51,14 @@ export class PlayerDialogComponent implements OnInit {
       ]
     };
     this.teamService.editTeam(formattedTeam);
+  }
+  onSubmit(playerForm: NgForm) {
+    const playerFormValue = { ...playerForm.value };
+    if (playerForm.valid) {
+      playerFormValue.leftFooted =
+        playerFormValue.leftFooted === "" ? false : playerFormValue.leftFooted;
+    }
+    this.newPlayer(playerFormValue);
+    window.location.replace("#");
   }
 }
