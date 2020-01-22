@@ -15,9 +15,13 @@ export class PlayerDialogComponent implements OnInit {
     label: key,
     key: Countries[key]
   }));
-  public squadNumber = Object.keys(SquadNumber).slice(
-    Object.keys(SquadNumber).length / 2
-  );
+  public squadNumber = Object.keys(SquadNumber)
+    .slice(Object.keys(SquadNumber).length / 2)
+    .slice(Object.keys(SquadNumber).length / 2)
+    .map(key => ({
+      label: key,
+      key: SquadNumber[key]
+    }));
   constructor(
     private playerService: PlayerService,
     private teamService: TeamService
