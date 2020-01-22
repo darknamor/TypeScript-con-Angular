@@ -34,3 +34,5 @@ url console https://console.firebase.google.com/u/1/project/typescript-proyecto/
 //creamos 2 componentes mas
 ng g component player-table
 ng g component player-dialog
+
+ng serve --ao //busca errores en la logica y en el template del poryecto
