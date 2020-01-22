@@ -4,6 +4,7 @@ import { PlayerService } from "../services/player.service";
 import { TeamService } from "../services/team.service";
 import { take } from "rxjs/operators";
 import { NgForm } from "@angular/forms";
+
 @Component({
   selector: "app-player-dialog",
   templateUrl: "./player-dialog.component.html",
@@ -11,6 +12,7 @@ import { NgForm } from "@angular/forms";
 })
 export class PlayerDialogComponent implements OnInit {
   private team;
+  public player;
   public countries = Object.keys(Countries).map(key => ({
     label: key,
     key: Countries[key]
@@ -52,6 +54,7 @@ export class PlayerDialogComponent implements OnInit {
     };
     this.teamService.editTeam(formattedTeam);
   }
+
   onSubmit(playerForm: NgForm) {
     const playerFormValue = { ...playerForm.value };
     if (playerForm.valid) {
